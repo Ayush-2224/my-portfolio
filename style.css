@@ -105,33 +105,6 @@ nav ul li a:hover {
     line-height: 1.8;
 }
 
-/* Skills Section */
-/* #skills {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-#skills h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skill {
-    background: #00bfff;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-} */
-
 /* Basic styles for the Skills section */
 #skills {
     padding: 50px;
@@ -349,3 +322,179 @@ a:hover{
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Media Query for mobile devices */
+@media only screen and (max-width: 768px) {
+    #about{
+        font-size:16px;
+    }
+    #about h2{
+        font-size: 28px;
+    }
+    nav ul li {
+        /* display: block; */
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    #home {
+        height: auto;
+        width: 100vw;
+        background-size: cover;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    /* Adjust the About Section */
+    #about {
+        width: 100vw;
+        padding: 50px 20px;
+    }
+
+    #about p {
+        max-width: 100%;
+    }
+
+    /* Adjust the Skills section */
+    #skills {
+        padding: 50px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .skill {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Adjust the Projects section */
+    #projects {
+        padding: 50px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust the Contact Section */
+    #contact {
+        padding: 40px 20px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+       /* Flexbox column layout for Home and About sections */
+       .box {
+        flex-direction: column;
+        width: 100vw; /* Make sure it covers the full screen width */
+    }
+
+    /* Home section covers full screen height */
+    #home {
+        height: 100vh;
+        width: 100vw; /* Ensure it takes the full width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .intro-text {
+        top: 0; /* Align it within the section */
+        position: relative;
+        padding: 10px;
+    }
+
+    /* About section full screen */
+    #about {
+        height: 100vh;
+        width: 100vw; /* Full width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #about p {
+        max-width: 100%; /* Ensures the paragraph spans the full screen width */
+    }
+}
+
+/* Media Query for larger screens like tablets and small laptops */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+   
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1.3rem;
+    }
+
+    /* Adjust the Skills section */
+    .skills-grid {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+
+    .skill {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    /* Adjust the Projects section */
+    .projects-grid {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        font-size: 17px;
+        padding: 10px 15px;
+    }
+}
